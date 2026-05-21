@@ -42,6 +42,12 @@ nano basic-playbook.yml
 
 ansible-playbook basic-playbook.yml -i inventory.ini
 
+ansible-doc ping
+
+ansible all -m setup
+
+
+
 ---
 - name: Basic Ansible Playbook
   hosts: all
@@ -56,7 +62,3 @@ ansible-playbook basic-playbook.yml -i inventory.ini
         name: apache2
         state: present
         update_cache: yes
-
-ansible-doc ping
-
-ansible all -m setup
